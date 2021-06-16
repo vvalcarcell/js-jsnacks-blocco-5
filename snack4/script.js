@@ -1,3 +1,5 @@
+var table = '';
+var htmlTable = document.getElementById('table');
 var students = [
     { name: 'Pippo', surname: 'Baudo', age: 80, description: '' },
     { name: 'Otto', surname: 'Bisotto', age: 70, description: '' },
@@ -11,10 +13,27 @@ for (i = 0; i < students.length; i++) {
 
 console.log(students);
 
-var divList = document.getElementById('list');
-for (i = 0; i < students.length; i++) {
+table += "<thead>";
+table += "<tr>";
+
+for (var key in students[0]) {
+    table += "<th>" + key.toUpperCase() + "</th>";
+}
+table += "</tr>";
+table += "</thead>";
+
+table += "<tbody>";
+for (var i = 0; i < students.length; i++) {
+    table += "<tr>";
     for (var key in students[i]) {
-        divList.innerHTML += '<li>' + key + ': ' + students[i][key] + '</li>';
-    };
-    divList.innerHTML += '</br>';
+        table += "<td>" + students[i][key] + "</td>";
+    }
+    table += "</tr>";
 };
+table += "</tbody>";
+
+
+htmlTable.innerHTML = table;
+
+
+
