@@ -13,14 +13,11 @@ for (i = 0; i < students.length; i++) {
 
 console.log(students);
 
-table += "<thead>";
-table += "<tr>";
-
+table += "<thead><tr>";
 for (var key in students[0]) {
     table += "<th>" + key.toUpperCase() + "</th>";
 }
-table += "</tr>";
-table += "</thead>";
+table += "</tr></thead>";
 
 table += "<tbody>";
 for (var i = 0; i < students.length; i++) {
