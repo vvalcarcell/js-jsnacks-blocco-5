@@ -1,0 +1,25 @@
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+ul {
+list-style: none;
+display: flex;
+}
+
+ul:first-child{
+font-weight: bold;
+background-color: #eee;
+}
+
+li {
+border: 1px solid #ccc;
+flex-basis: 15%;
+padding: 5px;
+}
+
+li:last-child {
+flex-basis: 30%;
+}
